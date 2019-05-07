@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "Robert Downey Jr.",
+      "username": "robertdowneyjr",
+      "verified": true,
+      "followsMe": false,
+      "image": "rdj.jpg"
+    },
+    {
+      "name": "Brie Larson",
+      "username": "brielarson",
+      "verified": true,
+      "followsMe": true,
+      "image": "brie.jpg"
+    },
+    {
+      "name": "Chris Hemsworth",
+      "username": "chrishemsworth",
+      "verified": true,
+      "followsMe": true,
+      "image": "chris.jpg"
+    },
+    {
+      "name": "Danai Gurira",
+      "username": "danaigurira",
+      "verified": true,
+      "followsMe": false,
+      "image": "danai.jpg"
+    }
+  ]
+}
