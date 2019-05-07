@@ -2,33 +2,13 @@
   <div id="app flex justify-center items-center">
     <SuggestionList />
 
-    <SuggestionList>
-      <template #name="{ user }">
-        <div class="identification">
-          <div class="primary">{{ user.username }}</div>
-          <div class="secondary">{{ user.name }}</div>
-          <div v-if="user.followsMe" class="tertiary">Follows You</div>
-        </div>
-      </template>
+    <!-- <div class="identification">
+			<div class="primary">brielarson</div>
+			<div class="secondary">Brie Larson</div>
+			<div class="tertiary">Follows You?</div>
+		</div> -->
 
-      <template #follow="{ follow }">
-        <button class="button" @click="follow">Follow</button>
-      </template>
-    </SuggestionList>
-
-    <Fetch url="/users.json" v-slot="{ data, loading, error }">
-      <div class="w-1/3 mx-auto">
-        <div v-if="loading">Loading...</div>
-
-        <div v-else-if="error">Errored!</div>
-
-        <div v-if="data">
-          <pre>
-            {{ data }}
-          </pre>
-        </div>
-      </div>
-    </Fetch>
+    <!-- <button class="button" @click="follow">Follow</button> -->
   </div>
 </template>
 

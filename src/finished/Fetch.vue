@@ -25,8 +25,13 @@ export default {
     setTimeout(this.fetch, 2000)
   },
   render() {
-    // write render function
-    return null
+    const { error, loading, data } = this
+
+    return this.$scopedSlots.default({
+      error,
+      loading,
+      data,
+    })
   },
 }
 </script>

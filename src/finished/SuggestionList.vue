@@ -5,13 +5,17 @@
         <img :src="`/images/${user.image}`" :alt="user.name" />
       </div>
 
-      <div class="identification">
-        <div class="primary">{{ user.username }}</div>
-        <div v-if="user.followsMe" class="secondary">Follows You</div>
-      </div>
+      <slot name="name" :user="user">
+        <div class="identification">
+          <div class="primary">{{ user.username }}</div>
+          <div v-if="user.followsMe" class="secondary">Follows You</div>
+        </div>
+      </slot>
 
       <div class="follow-outer">
-        <button class="follow" @click="follow">Follow</button>
+        <slot name="follow" :follow="follow">
+          <button class="follow" @click="follow">Follow</button>
+        </slot>
       </div>
     </div>
   </div>
